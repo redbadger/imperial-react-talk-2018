@@ -26,6 +26,12 @@ class App extends Component {
     });
   }
 
+  clearAll() {
+    this.setState({
+      items: []
+    });
+  }
+
   render() {
     return (
       <div>
@@ -41,6 +47,7 @@ class App extends Component {
           value={this.state.inputText}
         />
         <button onClick={() => this.addItem()}>Add Item</button>
+        <button onClick={() => this.clearAll()}>Clear All</button>
       </div>
     );
   }
