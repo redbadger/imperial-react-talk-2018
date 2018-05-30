@@ -1,6 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import Header from "./Header";
 
-const App = () => <Header name="Jon" />;
+class App extends Component {
+  state = {
+    name: "Jon Yardley"
+  };
+  render() {
+    return <Header name={this.state.name} />;
+  }
+}
 
 export default App;
