@@ -35,7 +35,11 @@ class App extends Component {
             <li key={`li-${item.id}`}>{item.label}</li>
           ))}
         </ul>
-        <input type="text" onChange={e => this.onInputChange(e)} />
+        <input
+          type="text"
+          onChange={e => this.onInputChange(e)}
+          value={this.state.inputText}
+        />
         <button onClick={() => this.addItem()}>Add Item</button>
       </div>
     );
