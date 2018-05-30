@@ -4,8 +4,15 @@ import Header from "./Header";
 class App extends Component {
   state = {
     name: "Jon Yardley",
-    items: [{ id: 0, label: "My first item" }]
+    items: [{ id: 0, label: "My first item" }],
+    inputText: ""
   };
+
+  onInputChange(e) {
+    const inputText = e.target.value;
+    this.setState({ inputText });
+  }
+
   render() {
     return (
       <div>
@@ -15,7 +22,7 @@ class App extends Component {
             <li key={`li-${item.id}`}>{item.label}</li>
           ))}
         </ul>
-        <input type="text" />
+        <input type="text" onChange={e => this.onInputChange(e)} />
         <button>Add Item</button>
       </div>
     );
