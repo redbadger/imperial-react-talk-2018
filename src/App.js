@@ -15,6 +15,8 @@ class App extends Component {
             <li key={`li-${item.id}`}>{item.label}</li>
           ))}
         </ul>
+        <input type="text" />
+        <button>Add Item</button>
       </div>
     );
   }
