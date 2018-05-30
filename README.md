@@ -1,3 +1,11 @@
+This repository accompanies the talk given at Imperial College London, 30/05/18.
+
+Each of the commits in the the commit history take you through the steps and refactoring done throughout the live demo: https://github.com/redbadger/imperial-react-talk-2018/commits/master.
+
+The slides which accompany this repository can be found here: https://docs.google.com/presentation/d/1ZPpVMOZ6CtKub9LGEDRno4_QZvLexnHQilsDRXQt9ek/edit?usp=sharing.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
