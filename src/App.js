@@ -36,6 +36,7 @@ class App extends Component {
     return (
       <div>
         <Header name={this.state.name} />
+        <p>Number of items: {this.state.items.length}</p>
         <ul>
           {this.state.items.map(item => (
             <li key={`li-${item.id}`}>{item.label}</li>
