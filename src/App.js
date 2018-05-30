@@ -13,6 +13,19 @@ class App extends Component {
     this.setState({ inputText });
   }
 
+  addItem() {
+    this.setState({
+      items: [
+        ...this.state.items,
+        {
+          id: this.state.items.length + 1,
+          label: this.state.inputText
+        }
+      ],
+      inputText: ""
+    });
+  }
+
   render() {
     return (
       <div>
@@ -23,7 +36,7 @@ class App extends Component {
           ))}
         </ul>
         <input type="text" onChange={e => this.onInputChange(e)} />
-        <button>Add Item</button>
+        <button onClick={() => this.addItem()}>Add Item</button>
       </div>
     );
   }
