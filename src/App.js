@@ -4,13 +4,17 @@ import Header from "./Header";
 class App extends Component {
   state = {
     name: "Jon Yardley",
-    items: [{ label: "My first item" }]
+    items: [{ id: 0, label: "My first item" }]
   };
   render() {
     return (
       <div>
         <Header name={this.state.name} />
-        <ul>{this.state.items.map(item => <li>{item.label}</li>)}</ul>
+        <ul>
+          {this.state.items.map(item => (
+            <li key={`li-${item.id}`}>{item.label}</li>
+          ))}
+        </ul>
       </div>
     );
   }
